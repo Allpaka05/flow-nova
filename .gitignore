@@ -3,3 +3,7 @@ out
 AppDir
 *.AppImage
 *.jar
+*.class
+target
+
+

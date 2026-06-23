@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: main.java.ua.allpaka05.flowchart.FlowchartApp
+
