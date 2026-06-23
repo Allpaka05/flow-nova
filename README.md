@@ -11,6 +11,12 @@ FlowNova is a desktop application designed for efficient creation and management
 * **Node Management:** Comprehensive system for adding, managing, and connecting nodes to form complex logical chains.
 * **Cross-Platform:** Built with Java Swing, ensuring compatibility across desktop environments.
 
+## Usage
+
+* Creating Nodes: Select a component from the toolbar and drag it onto the canvas.
+* Customizing Styles: Use the sidebar property panel to adjust border thickness, colors, and font settings for selected or default nodes.
+* Connecting Nodes: Click and drag between nodes to create directional flow lines.
+
 ## Getting Started
 
 ### Prerequisites
@@ -19,23 +25,78 @@ FlowNova is a desktop application designed for efficient creation and management
 
 ### Installation
 
-1. Download the latest executable (JAR or EXE) from the [Releases](https://github.com/Allpaka05/flow-nova/releases) page.
+1. Download the latest executable (JAR, EXE, or AppImage) from the [Releases](https://github.com/Allpaka05/flow-nova/releases) page.
 2. For the JAR version, run the following command in your terminal:
    ```bash
    java -jar FlowNova.jar
    ```
-3. Alternatively, use the provided EXE file for a standard desktop launch on Windows.
+3. Alternatively, use the provided EXE file on Windows or the AppImage on Linux for a more convenient desktop launch.
 
-## Usage
+## Build on Linux
 
-* Creating Nodes: Select a component from the toolbar and drag it onto the canvas.
-* Customizing Styles: Use the sidebar property panel to adjust border thickness, colors, and font settings for selected or default nodes.
-* Connecting Nodes: Click and drag between nodes to create directional flow lines.
+FlowNova can be built on Linux in two ways:
+
+- as a regular JAR file for running with Java,
+- as an AppImage for a more convenient desktop launch.
+
+### Requirements
+
+Before building, make sure you have:
+
+- Linux x86_64;
+- Java 17 or newer;
+- `bash`, `wget`, `tar`, `rsync`.
+
+### Build the JAR
+
+To build the JAR version, run:
+
+```bash
+./package-linux.sh
+```
+
+This creates `FlowNova.jar`.
+
+You can start it from the terminal with:
+
+```bash
+java -jar FlowNova.jar
+```
+
+### Build the AppImage
+
+To build the AppImage version, run:
+
+```bash
+./package-AppImage.sh
+```
+
+This creates `FlowNova-x86_64.AppImage`.
+
+You can start it in two ways:
+
+- from the terminal:
+  ```bash
+  chmod +x FlowNova-x86_64.AppImage
+  ./FlowNova-x86_64.AppImage
+  ```
+- from a file manager:
+  - open the file manager;
+  - find `FlowNova-x86_64.AppImage`;
+  - double-click it;
+  - if the system asks for permission, allow execution.
+
+### Which one to use
+
+- Use the **JAR** if you already have Java installed and want to run the app manually.
+- Use the **AppImage** if you want a portable desktop version that runs like a normal Linux app.
 
 ## Built With
 
-* Java Swing: Core framework for the graphical user interface.
-* Launch4j: Used for creating the Windows executable wrapper.
+* **Java Swing** — core framework for the graphical user interface.
+* **Launch4j** — used for creating the Windows executable wrapper.
+* **AppImageTool** — used to package FlowNova as a portable Linux desktop application.
+* **Eclipse Temurin 17** — bundled in the AppImage as the Java runtime for Linux.
 
 ## License
 
